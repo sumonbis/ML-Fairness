@@ -21,13 +21,13 @@ for task in all_tasks:
         path = base_path + model
         all_files = glob.glob(path + "/*.csv")
         li = []
-        #print('Loading csv files in ' + path)
+
         for filename in all_files:
+            np.seterr(divide = 'ignore')
             try:
                 df = pd.read_csv(filename, index_col=None, header=0)
             except:
                 print('Error loading raw-results. Check the file: ' + filename)
-            #del df['GTI']
             df['DI'] = np.log(df['DI'])
             df['CNT'] = np.log(df['CNT'])
             li.append(df)
@@ -39,8 +39,6 @@ for task in all_tasks:
         avg = avg.round(8)
         avg.replace([np.inf, -np.inf], np.nan, inplace=True)
         avg.fillna(avg.iloc[0], inplace=True)
-
-        #print('Combining experiments. Writing ' + base_path + model + '-avg.csv')
         avg.to_csv(base_path + model + '-avg.csv', index=False)
 
     # For each task, combine results of all the models and combine into a single file.
@@ -84,5 +82,5 @@ for task in all_tasks:
 
 combined = pd.concat(all_res)
 combined.insert(0, 'Dataset', [all_tasks[0]] + [''] * 7 + [all_tasks[1]] + [''] * 7 + [all_tasks[2]] + [''] * 7 + [all_tasks[3]] + [''] * 7 + [all_tasks[4]] + [''] * 7)
-print('Combining results for all the tasks. Writing to ' + root_path + 'final.csv')
-combined.to_csv(root_path + 'final.csv', index=False)
+print('Combining results for all the tasks. Writing to ' + root_path + 'final-result.csv')
+combined.to_csv(root_path + 'final-result.csv', index=False)
