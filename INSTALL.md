@@ -23,7 +23,7 @@ When you are done with the experiments, you can exit this virtual environment by
 pip install --ignore-installed --upgrade 'tensorflow >= 1.13.1, < 2'
 ```
 
-4. Clone this ML-Fairness repository. Alternatively, you can download the repository from Zenodo.
+4. Clone this ML-Fairness repository. Alternatively, you can download the repository from [![DOI](https://zenodo.org/badge/269506778.svg)](https://zenodo.org/badge/latestdoi/269506778).
 ```
 git clone https://github.com/sumonbis/ML-Fairness.git
 ```
@@ -31,8 +31,8 @@ Except home credit, all other four datasets are already placed inside `ML-Fairne
 
 5. Install AIF360 package:
   * Clone AIF360 GitHub repo: `git clone https://github.com/IBM/AIF360`.
-  * Copy three datasets (adult, bank, german) from the ML-Fairness repository (ML-Fairness/dataset/) which is downloaded in step 4 and then place inside cloned AIF360 repository (AIF360/aif360/data/raw/).
-  * Navigate to the cloned root directory of AIF360 and run:
+  * Copy three datasets (adult, bank, german) from the ML-Fairness repository (`ML-Fairness/dataset/`) which is downloaded in step 4 and then place inside cloned AIF360 repository (`AIF360/aif360/data/raw/`).
+  * Navigate to the cloned root directory of AIF360 (`AIF360/`) and run:
   ```
   pip install --editable '.[all]'
   ```
@@ -73,6 +73,6 @@ Some datasets are pretty large. Training all the models can take hours. In our b
 ## Validate result
 All the results presented in the paper are stored in multiple sheets of this excel file: `ML-Fairness/artifact-result.xlsx`. After running the models, the results can be validated using the excel file.
 
-Follow the [Execution](#exec) or [Usage example](#usage) to generate/update results into `ML-Fairness/src/models/titanic/all-model.csv`. Validate this result in this file with the `all-result` sheet of the excel file. Note that, the results presented in the excel file are produced after running each of the models multiple times. So, result might differ very slightly after decimal point.
+Follow the [Execution](#execution) or [Usage example](#usage-example) to generate/update results into `ML-Fairness/src/models/titanic/all-model.csv`. Validate this result in this file with the `all-result` sheet of the excel file. Note that, the results presented in the excel file are produced after running each of the models multiple times. So, result might differ very slightly after decimal point.
 
 All the tables and figures in the paper are generated from the following sheets of the excel file: `all-result`, `table-2`, `figure-3`, `figure-4`, `figure-8`, `figure-9`. The data in the following sheets are obtained from the master sheet `all-result`.
