@@ -37,7 +37,7 @@ Except home credit, all other four datasets are already placed inside `ML-Fairne
   pip install --editable '.[all]'
   ```
 
-## Execution(#exec)
+## Execution
 Navigate to the source code directory of cloned ML-Fairness repository `ML-Fairness/src/` using the command line environment `(mlfairness) $` from setup step 2.
 
 Under each of the 5 tasks (`german`, `adult`, `bank`, `home`, `titanic`), there are separate python scripts to compute fairness.
@@ -60,7 +60,7 @@ For collating the experiments and combine all the results, run `python combine-r
 
 The results are produced both in raw format and accumulated in a structured one to make it reusable.
 
-## Usage example(#usage)
+## Usage example
 Some datasets are pretty large. Training all the models can take hours. In our benchmark, titanic is the smallest dataset. Running the 8 titanic models would produce results within a few minutes.
 
 1. Navigate to `ML-Fairness/src/` and run `python titanic-all.py`. This will show success message on the command line.
