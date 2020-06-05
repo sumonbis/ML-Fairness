@@ -37,6 +37,12 @@ Except home credit, all other four datasets are already placed inside `ML-Fairne
   pip install --editable '.[all]'
   ```
 
+6. Install other necessary packages needed to run the models.
+
+```
+pip install xgboost imblearn catboost lightgbm
+```
+
 ## Execution
 Navigate to the source code directory of cloned ML-Fairness repository `ML-Fairness/src/` using the command line environment `(mlfairness) $` from setup step 2.
 
