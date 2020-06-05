@@ -13,5 +13,8 @@ For any concerns [contact](/CONTACT.md) the corresponding author Sumon Biswas [s
 
 The code is licensed under [MIT License](/LICENSE.md): Copyright (c) 2020 FSE_ML_Fairness
 
+#### DOI
+[![DOI](https://zenodo.org/badge/269506778.svg)](https://zenodo.org/badge/latestdoi/269506778)
+
 #### ACM Reference
 Biswas, S. and Rajan, H. 2020. Do the Machine Learning Models on a Crowd Sourced Platform Exhibit Bias? An Empirical Study on Model Fairness. ESEC/FSE’2020: The 28th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering (Nov. 2020).
