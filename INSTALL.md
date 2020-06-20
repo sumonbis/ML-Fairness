@@ -37,6 +37,8 @@ Except home credit, all other four datasets are already placed inside `ML-Fairne
   pip install --editable '.[all]'
   ```
 
+If the above step fails, please follow the package setup steps from https://github.com/IBM/AIF360.
+
 6. Install other necessary packages needed to run the models.
 
 ```
