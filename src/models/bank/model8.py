@@ -3,9 +3,10 @@
 
 
 import sys
-sys.path.append('../')
-from utils.packages import *
-from utils.ml_fairness import *
+sys.path.append('../utils/')
+# sys.path.insert(1, '../utils/')
+from packages import *
+from ml_fairness import *
 
 import csv
 from pathlib import Path

@@ -44,18 +44,18 @@ pip install xgboost imblearn catboost lightgbm
 ```
 
 ## Execution
-Navigate to the source code directory of cloned ML-Fairness repository `ML-Fairness/src/` using the command line environment `(mlfairness) $` from setup step 2.
+Navigate to the source code directory of cloned ML-Fairness repository `ML-Fairness/src/models/` using the command line environment `(mlfairness) $` from setup step 2.
 
 Under each of the 5 tasks (`german`, `adult`, `bank`, `home`, `titanic`), there are separate python scripts to compute fairness.
 
 #### Run a single model
-To get fairness result of a specific model run: `./models.sh <task> <id>` (id is an integer between 1 to 8). For example, to run model 1 of titanic: `./models titanic 1`.
+To get fairness result of a specific model run: `./models.sh <task> <id>` (id is an integer between 1 to 8). For example, to run model 1 of titanic: `./models.sh titanic 1`.
 
 #### Run a single task (8 models)
 To run all the models for a single task run `./models.sh <task>`. For example, to run all the models of titanic: `./models.sh titanic`
 
 #### Run all the models (40 models, 5 tasks)
-To run all the models for all the tasks, run `./models all`.
+To run all the models for all the tasks, run `./models.sh all`.
 
 Note that the running time depends on the machine. In general, this will take more than a day to run all the models on a personal computer.
 
@@ -69,7 +69,7 @@ The results are produced both in raw format and accumulated in a structured one 
 ## Usage example
 Some datasets are pretty large. Training all the models can take hours. In our benchmark, titanic is the smallest dataset. Running the 8 titanic models would produce results within a few minutes.
 
-1. Navigate to `ML-Fairness/src/` and run `python titanic-all.py`. This will show success message on the command line.
+1. Navigate to `ML-Fairness/src/models/` and run `./models titanic`. This will show success message on the command line.
 
 2. Then run `python combine-results.py`.
 
