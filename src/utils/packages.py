@@ -1,4 +1,3 @@
-from IPython.display import Markdown, display
 # numpy and pandas for data manipulation
 from time import time
 from pathlib import Path

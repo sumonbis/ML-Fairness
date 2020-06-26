@@ -48,7 +48,7 @@ pip install xgboost imblearn catboost lightgbm
 ## Execution
 Navigate to the source code directory of cloned ML-Fairness repository `ML-Fairness/src/models/` using the command line environment `(mlfairness) $` from setup step 2.
 
-Under each of the 5 tasks (`german`, `adult`, `bank`, `home`, `titanic`), there are separate python scripts to compute fairness.
+Under each of the 5 tasks (`german`, `adult`, `bank`, `home`, `titanic`), there are separate Python scripts to compute fairness.
 
 #### Run a single model
 To get fairness result of a specific model run: `./models.sh <task> <id>` (id is an integer between 1 to 8). For example, to run model 1 of titanic: `./models.sh titanic 1`.
