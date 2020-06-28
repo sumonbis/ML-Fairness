@@ -37,7 +37,7 @@ Except home credit, all other four datasets are already placed inside `ML-Fairne
   pip install --editable '.[all]'
   ```
 
-If the above step fails, please follow the package setup steps from https://github.com/IBM/AIF360.
+Alternatively, you can install AIF360 by `pip install 'aif360[all]'` and then run the above steps to make the datasets abailable in AIF260 package. If the above step fails, please follow the package setup steps from https://github.com/IBM/AIF360. Especially, if your environment is missing CVXPY, install it by `conda install -c conda-forge cvxpy` and then install AIF360.
 
 6. Install other necessary packages needed to run the models.
 
@@ -81,6 +81,8 @@ Some datasets are pretty large. Training all the models can take hours. In our b
 ## Validate result
 All the results presented in the paper are stored in multiple sheets of this excel file: `ML-Fairness/artifact-result.xlsx`. After running the models, the results can be validated using the excel file.
 
-Follow the [Execution](#execution) or [Usage example](#usage-example) to generate/update results into `ML-Fairness/src/models/titanic/all-model.csv`. Validate this result in this file with the `all-result` sheet of the excel file. Note that, the results presented in the excel file are produced after running each of the models multiple times. So, result might differ very slightly after decimal point.
+Follow the [Execution](#execution) or [Usage example](#usage-example) to generate/update results into `ML-Fairness/src/models/titanic/all-model.csv`. The rows IDs correspond to different models and the columns correspond to performance metrics and fairness metrics. Note that the columns are grouped by mitigation algorithms, first group is before applying any mitigation. 
+
+Validate this result in this file with the `all-result` sheet of the excel file. Note that, the results presented in the excel file are produced after running each of the models multiple times. So, result might differ very slightly after decimal point.
 
 All the tables and figures in the paper are generated from the following sheets of the excel file: `all-result`, `table-2`, `figure-3`, `figure-4`, `figure-8`, `figure-9`. The data in the following sheets are obtained from the master sheet `all-result`.
